@@ -18,13 +18,12 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-    /**
-     * Register the exception handling callbacks for the application.
-     */
-    public function register(): void
-    {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
-    }
+    // public function render($request, Throwable $exception)
+    // {
+    //     return response()->json([
+    //         'code'    => 500,
+    //         'message' => 'Internal Server Error',
+    //         'enum'    => "FAILED"
+    //     ], 500);
+    // }
 }
