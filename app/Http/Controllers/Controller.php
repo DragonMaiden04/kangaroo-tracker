@@ -13,12 +13,13 @@ class Controller extends BaseController
     const SUCCESS_ENUM = 'SUCCESS';
     const SUCCESS_HTTP_CODE = 200;
     
-    public function responseSuccess(string $message)
+    public function responseSuccess(string $message=null, $data=null)
     {
         return response()->json([
             'code'    => self::SUCCESS_HTTP_CODE,
-            'message' => $message,
-            'enum'    => self::SUCCESS_ENUM
+            'message' => $message ?? null,
+            'enum'    => self::SUCCESS_ENUM,
+            'data'    => $data ?? null
         ]);
     }
 }

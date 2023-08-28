@@ -21,4 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('kangaroo')->controller(KangarooController::class)->group(function () {
     Route::post('/', 'addKangaroo');
+    Route::get('/', 'getAllKangaroo');
+    Route::put('/{id}', 'updateKangaroo');
 });

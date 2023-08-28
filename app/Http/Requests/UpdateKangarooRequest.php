@@ -2,10 +2,11 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Validation\Rule;
+use Illuminate\Foundation\Http\FormRequest;
 use App\Http\Requests\ApiRequest;
+use Illuminate\Validation\Rule;
 
-class KangarooRequest extends ApiRequest
+class UpdateKangarooRequest extends ApiRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -13,9 +14,10 @@ class KangarooRequest extends ApiRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
     public function rules(): array
-    { 
+    {
+        $userId = $this->route('id');
         return [
-            'name'         => 'required|max:255|unique:kangaroos',
+            'name'         => ['required','max:255', Rule::unique('kangaroos')->ignore($userId)],
             'nickname'     => 'string|max:255|nullable',
             'weight'       => 'required|decimal:0,2',
             'height'       => 'required|decimal:0,2',
