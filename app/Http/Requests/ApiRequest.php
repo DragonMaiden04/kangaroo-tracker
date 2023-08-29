@@ -16,6 +16,11 @@ class ApiRequest extends FormRequest
         return true;
     }
 
+    /**
+     * Throw 422 Error when validation failed
+     * @param Validator $validator
+     * @return [json response]
+     */
     public function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([

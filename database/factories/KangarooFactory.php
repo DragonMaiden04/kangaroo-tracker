@@ -17,7 +17,7 @@ class KangarooFactory extends Factory
     public function definition(): array
     {
         $fullName = fake()->unique()->name(); // Generate a random full name
-        $limitedLength = substr($fullName, 0, 200);
+        $limitedLength = substr($fullName, 0, 100);
         $gender = fake()->randomElement(['M', 'F']);
         $friendliness = fake()->randomElement(['I', 'F', null]);
         $color = fake()->randomElement(['red', 'brown', 'blue', null]);

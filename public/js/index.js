@@ -2,7 +2,6 @@ $(function() {
     const store = new DevExpress.data.CustomStore({
         key: 'id',
         load(loadOptions) {
-            console.log(loadOptions);
           const deferred = $.Deferred();
           const args = {};
           args.offset = loadOptions.skip;

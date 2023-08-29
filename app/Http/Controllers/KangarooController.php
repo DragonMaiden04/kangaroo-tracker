@@ -13,7 +13,14 @@ class KangarooController extends Controller
     const ADD_SUCCESS_MESSAGE = 'Save Success';
     const UPDATE_SUCCESS_MESSAGE = 'Update Success';
     const DEFAULT_CHUNK = 10;
-    const DEFAULT_OFFSET = 0;
+    const DEFAULT_OFFSET = 0;    
+        
+    
+    /**
+     * Adds kangaroo details
+     * @param KangarooRequest $request
+     * @return [json response]
+     */
     public function addKangaroo(KangarooRequest $request)
     {
         $kangaroo = Kangaroo::create([
@@ -29,7 +36,11 @@ class KangarooController extends Controller
 
         return $this->responseSuccess(self::ADD_SUCCESS_MESSAGE);
     }
-
+    /**
+     * Get list of Kangaroos
+     * @param Request $request
+     * @return [tjson responseype]
+     */
     public function getAllKangaroo(Request $request)
     {
         $limit = $request->limit ?? self::DEFAULT_CHUNK;
@@ -50,7 +61,13 @@ class KangarooController extends Controller
         return $this->responseSuccess(null, $data);
     }
 
-    public function updateKangaroo(UpdateKangarooRequest $request, $id)
+    /**
+     * Updates data of a Kangaroo based on id
+     * @param UpdateKangarooRequest $request
+     * @param int $id
+     * @return [type]
+     */
+    public function updateKangaroo(UpdateKangarooRequest $request, int $id)
     {
         $result = Kangaroo::where('id', $id)->update([
             'name'         => $request->name,
@@ -66,7 +83,12 @@ class KangarooController extends Controller
         return $this->responseSuccess(self::UPDATE_SUCCESS_MESSAGE);
     }
 
-    public function getKangaroo($id)
+    /**
+     * Get kangaroo details based on id
+     * @param int $id
+     * @return [type]
+     */
+    public function getKangaroo(int $id)
     {
         $result = Kangaroo::find($id);
         return view('update', compact('result'));

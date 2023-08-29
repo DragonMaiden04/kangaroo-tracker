@@ -13,6 +13,13 @@ class Controller extends BaseController
     const SUCCESS_ENUM = 'SUCCESS';
     const SUCCESS_HTTP_CODE = 200;
     
+    /**
+     * Return Success JSON Object
+     * @param string $message=null
+     * @param array $data=null
+     * 
+     * @return [json response]
+     */
     public function responseSuccess(string $message=null, $data=null)
     {
         $response = [

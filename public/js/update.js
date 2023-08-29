@@ -1,11 +1,16 @@
 $(function() {
     
     let update = {
+        /**
+         * Initialize all Dom elements and events
+         */
         init: function () {
             this.setDOMElements();
             this.setElementsEvents();
         },
-
+        /**
+         * Set Dom Elements
+         */
         setDOMElements: function () {
             this.nameInput = $('#name');
             this.nicknameInput = $('#nickname');
@@ -16,6 +21,9 @@ $(function() {
             this.friendlinessSelect = $('#friendliness');
             this.bdayInput = $('#birthday');
         },
+        /**
+         * Set Events
+         */
         setElementsEvents: function () {
             $( "#birthday" ).datepicker({
                 changeMonth: true,
@@ -25,6 +33,10 @@ $(function() {
             });
             $('#Submit').on('click', update.saveKangarooDetails);
         },
+        /**
+         * Update user input using put req
+         * @returns 
+         */
         saveKangarooDetails: async function () {
             try {
                 update.clearErrors();
@@ -49,6 +61,11 @@ $(function() {
                 update.showError(error.response.data.errors);
             }
         },
+        /**
+         * Show input errors
+         * @param {object} errors 
+         * @returns 
+         */
         showError: function(errors) {
             let keys = Object.keys(errors);
 
@@ -61,6 +78,9 @@ $(function() {
                 $(`#${key}`).addClass('error-input');
             }
         },
+        /**
+         * Remove error messages on DOM
+         */
         clearErrors: function() {
             $('input').removeClass('error-input');
             $('select').removeClass('error-input');
