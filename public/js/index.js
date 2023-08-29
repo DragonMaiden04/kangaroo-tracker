@@ -91,6 +91,9 @@ $(function() {
                     window.location.href = `/edit/${id}`;
                 }
             }]
-        }]
+        }],
+        columnHidingEnabled: true,
+        columnMinWidth: 100,
+        width: '100%'
       }).dxDataGrid('instance');
 })

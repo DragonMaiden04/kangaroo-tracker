@@ -1,0 +1,36 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Poppins' !important;
+}
+
+#gridContainer {
+    font-family: 'Poppins' !important;
+}
+
+.header {
+    background-color: #3cbab2;
+    padding: 5px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+.header ul {
+    padding-left: 10px;
+}
+.header li {
+    display: inline;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+}
+.header li:hover {
+    border: none;
+    border-radius: 5px;
+    background-color: #28484f;
+}
+.header a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+h1 {
+    color: #28484f;
+}

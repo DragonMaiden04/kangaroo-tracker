@@ -14,61 +14,73 @@
     <script src="{{ asset('js/add.js') }}"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="form">
-            <div class="title">
-                <h1>ADD NEW KANGAROO</h1>
-            </div>
-            <div class="form-body">
-                <div class="form-inline">
-                    <label for="name">Name:<span class="required">*</span></label>
-                    <input type="text" id="name" name="name">
-                    <label for="name" class="error" id="name-error"></label>
+    <div class="section">
+        <div class="header">
+            <ul>
+                <a href="/">
+                    <li>View List</li>
+                </a>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="form">
+                <div class="title">
+                    <h1>ADD NEW KANGAROO</h1>
                 </div>
-                <div class="form-inline">
-                    <label for="nickname">Nickname:</label>
-                    <input type="text" id="nickname" name="nickname">
-                    <label for="name" class="error" id="nickname-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="weight">Weight:<span class="required">*</span></label>
-                    <input type="number" id="weight" name="weight" placeholder="kg" step="0.01">
+                <div class="form-body">
+                    <div class="form-inline">
+                        <label for="name">Name:<span class="required">*</span></label>
+                        <input type="text" id="name" name="name">
+                        <label for="name" class="error" id="name-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="nickname">Nickname:</label>
+                        <input type="text" id="nickname" name="nickname">
+                        <label for="name" class="error" id="nickname-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="weight">Weight:<span class="required">*</span></label>
+                        <input type="number" id="weight" name="weight" placeholder="kg" step="0.01">
 
-                    <label for="height">Height:<span class="required">*</span></label>
-                    <input type="number" id="height" name="height" placeholder="ft" step="0.01">
-                    
-                    <label for="name" class="error" id="weight-error"></label>
-                    <label for="name" class="error" id="height-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="color">Color:</label>
-                    <input type="text" id="color" name="color">
-                    <label for="name" class="error" id="color-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="gender">Gender:<span class="required">*</span></label>
-                    <select name="gender" id="gender">
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                    </select>
-                    <label for="name" class="error" id="gender-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="friendliness">Friendliness:</label>
-                    <select name="friendliness" id="friendliness">
-                        <option value=""></option>
-                        <option value="I">Independent</option>
-                        <option value="F">Friendly</option>
-                    </select>
-                    <label for="name" class="error" id="friendliness-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="bday">Birthday:<span class="required">*</span></label>
-                    <input type="text" id="birthday" name="bday">
-                    <label for="name" class="error" id="birthday-error"></label>
-                </div>
-                <div class="btn-holder">
-                    <button id="Submit">Add</button>
+                        <label for="height">Height:<span class="required">*</span></label>
+                        <input type="number" id="height" name="height" placeholder="ft" step="0.01">
+                    </div>
+                    <div>
+                        <label for="name" class="error" id="weight-error"></label>
+                    </div>
+                    <div>
+                        <label for="name" class="error" id="height-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="color">Color:</label>
+                        <input type="text" id="color" name="color">
+                        <label for="name" class="error" id="color-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="gender">Gender:<span class="required">*</span></label>
+                        <select name="gender" id="gender">
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                        <label for="name" class="error" id="gender-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="friendliness">Friendliness:</label>
+                        <select name="friendliness" id="friendliness">
+                            <option value=""></option>
+                            <option value="I">Independent</option>
+                            <option value="F">Friendly</option>
+                        </select>
+                        <label for="name" class="error" id="friendliness-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="bday">Birthday:<span class="required">*</span></label>
+                        <input type="text" id="birthday" name="bday">
+                        <label for="name" class="error" id="birthday-error"></label>
+                    </div>
+                    <div class="btn-holder">
+                        <button id="Submit">Add</button>
+                    </div>
                 </div>
             </div>
         </div>

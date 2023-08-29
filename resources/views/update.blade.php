@@ -14,61 +14,72 @@
     <script src="{{ asset('js/update.js') }}"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="form">
-            <div class="title">
-                <h1>UPDATE KANGAROO</h1>
-            </div>
-            <div class="form-body">
-                <div class="form-inline">
-                    <label for="name">Name:<span class="required">*</span></label>
-                    <input type="text" id="name" name="name" value="{{$result->name}}">
-                    <label for="name" class="error" id="name-error"></label>
+    <div class="section">
+        <div class="header">
+            <ul>
+                <a href="/"><li>View List</li></a>
+                <a href="/add"><li>Add Kangaroo</li></a>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="form">
+                <div class="title">
+                    <h1>UPDATE KANGAROO</h1>
                 </div>
-                <div class="form-inline">
-                    <label for="nickname">Nickname:</label>
-                    <input type="text" id="nickname" name="nickname" value="{{$result->nickname}}">
-                    <label for="name" class="error" id="nickname-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="weight">Weight:<span class="required">*</span></label>
-                    <input type="number" id="weight" name="weight" placeholder="kg" step="0.01" value="{{$result->weight}}">
+                <div class="form-body">
+                    <div class="form-inline">
+                        <label for="name">Name:<span class="required">*</span></label>
+                        <input type="text" id="name" name="name" value="{{$result->name}}">
+                        <label for="name" class="error" id="name-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="nickname">Nickname:</label>
+                        <input type="text" id="nickname" name="nickname" value="{{$result->nickname}}">
+                        <label for="name" class="error" id="nickname-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="weight">Weight:<span class="required">*</span></label>
+                        <input type="number" id="weight" name="weight" placeholder="kg" step="0.01" value="{{$result->weight}}">
 
-                    <label for="height">Height:<span class="required">*</span></label>
-                    <input type="number" id="height" name="height" placeholder="ft" step="0.01" value="{{$result->height}}">
-                    
-                    <label for="name" class="error" id="weight-error"></label>
-                    <label for="name" class="error" id="height-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="color">Color:</label>
-                    <input type="text" id="color" name="color" value="{{$result->color}}">
-                    <label for="name" class="error" id="color-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="gender">Gender:<span class="required">*</span></label>
-                    <select name="gender" id="gender">
-                        <option value="M" {{ ($result->gender === 'M') ? 'selected' : '' }}>Male</option>
-                        <option value="F" {{ ($result->gender === 'F') ? 'selected' : '' }}>Female</option>
-                    </select>
-                    <label for="name" class="error" id="gender-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="friendliness">Friendliness:</label>
-                    <select name="friendliness" id="friendliness">
-                        <option value=""></option>
-                        <option value="I" {{ ($result->friendliness === 'I') ? 'selected' : '' }}>Independent</option>
-                        <option value="F" {{ ($result->friendliness === 'F') ? 'selected' : '' }}>Friendly</option>
-                    </select>
-                    <label for="name" class="error" id="friendliness-error"></label>
-                </div>
-                <div class="form-inline">
-                    <label for="bday">Birthday:<span class="required">*</span></label>
-                    <input type="text" id="birthday" name="bday" value="{{$result->birthday}}">
-                    <label for="name" class="error" id="birthday-error"></label>
-                </div>
-                <div class="btn-holder">
-                    <button id="Submit">Update</button>
+                        <label for="height">Height:<span class="required">*</span></label>
+                        <input type="number" id="height" name="height" placeholder="ft" step="0.01" value="{{$result->height}}">
+                    </div>
+                    <div>
+                        <label for="name" class="error" id="weight-error"></label>
+                    </div>
+                    <div>
+                        <label for="name" class="error" id="height-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="color">Color:</label>
+                        <input type="text" id="color" name="color" value="{{$result->color}}">
+                        <label for="name" class="error" id="color-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="gender">Gender:<span class="required">*</span></label>
+                        <select name="gender" id="gender">
+                            <option value="M" {{ ($result->gender === 'M') ? 'selected' : '' }}>Male</option>
+                            <option value="F" {{ ($result->gender === 'F') ? 'selected' : '' }}>Female</option>
+                        </select>
+                        <label for="name" class="error" id="gender-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="friendliness">Friendliness:</label>
+                        <select name="friendliness" id="friendliness">
+                            <option value=""></option>
+                            <option value="I" {{ ($result->friendliness === 'I') ? 'selected' : '' }}>Independent</option>
+                            <option value="F" {{ ($result->friendliness === 'F') ? 'selected' : '' }}>Friendly</option>
+                        </select>
+                        <label for="name" class="error" id="friendliness-error"></label>
+                    </div>
+                    <div class="form-inline">
+                        <label for="bday">Birthday:<span class="required">*</span></label>
+                        <input type="text" id="birthday" name="bday" value="{{$result->birthday}}">
+                        <label for="name" class="error" id="birthday-error"></label>
+                    </div>
+                    <div class="btn-holder">
+                        <button id="Submit">Update</button>
+                    </div>
                 </div>
             </div>
         </div>
