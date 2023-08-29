@@ -7,6 +7,7 @@ $(function() {
           const args = {};
           args.offset = loadOptions.skip;
           args.limit = loadOptions.take;
+          args.sort = loadOptions.sort !== null ? loadOptions.sort[0] : null;
           $.ajax({
             url: '/api/kangaroo',
             dataType: 'json',
@@ -40,47 +41,39 @@ $(function() {
         {
           dataField: 'id',
           dataType: 'number',
-          allowSorting: false
+          width: 100
         },
         {
           dataField: 'name',
-          dataType: 'string',
-          allowSorting: false
+          dataType: 'string'
         }, 
         {
           dataField: 'nickname',
-          dataType: 'string',
-          allowSorting: false
+          dataType: 'string'
         },
         {
           dataField: 'weight',
-          dataType: 'number',
-          allowSorting: false
+          dataType: 'number'
         }, 
         {
           dataField: 'height',
-          dataType: 'number',
-          allowSorting: false
+          dataType: 'number'
         }, 
         {
           dataField: 'gender',
-          dataType: 'string',
-          allowSorting: false
+          dataType: 'string'
         }, 
         {
             dataField: 'color',
-            dataType: 'string',
-            allowSorting: false
+            dataType: 'string'
         }, 
         {
             dataField: 'friendliness',
-            dataType: 'string',
-            allowSorting: false
+            dataType: 'string'
         }, 
         {
             dataField: 'birthday',
-            dataType: 'date',
-            allowSorting: false
+            dataType: 'date'
         },
         {
             type: "buttons",
@@ -92,8 +85,6 @@ $(function() {
                 }
             }]
         }],
-        columnHidingEnabled: true,
-        columnMinWidth: 100,
-        width: '100%'
+        columnHidingEnabled: true
       }).dxDataGrid('instance');
 })

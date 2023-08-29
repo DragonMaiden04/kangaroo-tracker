@@ -30,20 +30,20 @@
                 <div class="form-body">
                     <div class="form-inline">
                         <label for="name">Name:<span class="required">*</span></label>
-                        <input type="text" id="name" name="name">
+                        <input type="text" id="name" name="name" autocomplete="off">
                         <label for="name" class="error" id="name-error"></label>
                     </div>
                     <div class="form-inline">
                         <label for="nickname">Nickname:</label>
-                        <input type="text" id="nickname" name="nickname">
+                        <input type="text" id="nickname" name="nickname" autocomplete="off">
                         <label for="name" class="error" id="nickname-error"></label>
                     </div>
                     <div class="form-inline">
                         <label for="weight">Weight:<span class="required">*</span></label>
-                        <input type="number" id="weight" name="weight" placeholder="kg" step="0.01">
+                        <input type="number" id="weight" name="weight" placeholder="kg" step="0.01" autocomplete="off">
 
                         <label for="height">Height:<span class="required">*</span></label>
-                        <input type="number" id="height" name="height" placeholder="ft" step="0.01">
+                        <input type="number" id="height" name="height" placeholder="ft" step="0.01" autocomplete="off">
                     </div>
                     <div>
                         <label for="name" class="error" id="weight-error"></label>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-inline">
                         <label for="color">Color:</label>
-                        <input type="text" id="color" name="color">
+                        <input type="text" id="color" name="color" autocomplete="off">
                         <label for="name" class="error" id="color-error"></label>
                     </div>
                     <div class="form-inline">
@@ -75,7 +75,7 @@
                     </div>
                     <div class="form-inline">
                         <label for="bday">Birthday:<span class="required">*</span></label>
-                        <input type="text" id="birthday" name="bday">
+                        <input type="text" id="birthday" name="bday" autocomplete="off">
                         <label for="name" class="error" id="birthday-error"></label>
                     </div>
                     <div class="btn-holder">

@@ -14,7 +14,6 @@ class KangarooController extends Controller
     const UPDATE_SUCCESS_MESSAGE = 'Update Success';
     const DEFAULT_CHUNK = 10;
     const DEFAULT_OFFSET = 0;
-
     public function addKangaroo(KangarooRequest $request)
     {
         $kangaroo = Kangaroo::create([
@@ -35,7 +34,14 @@ class KangarooController extends Controller
     {
         $limit = $request->limit ?? self::DEFAULT_CHUNK;
         $offset = $request->offset ?? self::DEFAULT_OFFSET;
-        $result = KangarooResource::collection(Kangaroo::offset($offset)->limit($limit)->get());
+        $sort = $request->sort;
+        $query = Kangaroo::offset($offset)->limit($limit);
+        if (!empty($sort)) {
+            $order = $sort['desc'] === 'true' ? 'desc' : 'asc';
+            $column = $sort['selector'];
+            $query->orderBy($column, $order);
+        }
+        $result = KangarooResource::collection($query->get());
         $totalCount = Kangaroo::count();
         $data = [
             'data' => $result,
