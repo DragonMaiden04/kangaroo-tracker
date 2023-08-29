@@ -20,7 +20,8 @@ $(function() {
             $( "#birthday" ).datepicker({
                 changeMonth: true,
                 changeYear: true,
-                dateFormat: "yy-mm-dd"
+                dateFormat: "yy-mm-dd",
+                maxDate: 0
             });
             $('#Submit').on('click', add.saveKangarooDetails);
         },
