@@ -26,3 +26,8 @@
     php artisan serve
     ```
 8. Now you can visit the homepage @ http://127.0.0.1:8000 or on the port you specify
+
+9. If you want to generate 50 dummy data, You can use the seeder I created. Run this ff command:
+    ```
+    php artisan db:seed
+    ```
