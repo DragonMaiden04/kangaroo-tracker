@@ -15,11 +15,16 @@ class Controller extends BaseController
     
     public function responseSuccess(string $message=null, $data=null)
     {
-        return response()->json([
+        $response = [
             'code'    => self::SUCCESS_HTTP_CODE,
-            'message' => $message ?? null,
             'enum'    => self::SUCCESS_ENUM,
-            'data'    => $data ?? null
-        ]);
+        ];
+        if (!empty($data)) {
+            $response = array_merge($response, $data);
+        }
+        if (!empty($message)) {
+            $response['message'] = $message;
+        }
+        return response()->json($response);
     }
 }
